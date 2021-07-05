@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>2 Items</title>
+	</head>
+
+<body>
+
+
+	 <!-- Adding a form -->
+	<form action="connect.php" method="post">
+	<form action="mailto:mangenadouglas59@gmail.com" method="post" enctype="text/plain">
+	<!-- Add 2 items, bread and buns -->
+		<div class="check-list" id="check-list">
+			<ul class="list">
+				<li clas="list-element" name="QualityOfBread">
+					<p>Bread</p><br/>
+						<!-- Adding checkboxes for bread -->
+						<input type="checkbox" name="bread_quality" value="good bread" onclick="return ValidateBreadQuality();">Good Bread<br/>  
+						<input type="checkbox" name="bread_quality" value="bad bread" onclick="return ValidateBreadQuality();">Bad Bread<br/>  
+						
+						
+				</li>
+<br/>
+				<li clas="list-element" name="QualityOfBuns">
+					<p>Buns</p><br>
+						<!-- Adding checkboxes for bread -->
+						<input type="checkbox" name="buns_quality" value="good buns" onclick="return ValidateBunsQuality();">Good Buns<br/>  
+						<input type="checkbox" name="buns_quality" value="bad buns" onclick="return ValidateBunsQuality();">Bad Buns<br>  
+				
+				</li>
+<br/>				
+					<!-- Adding adding personal details -->
+					<p>Enter your Name and Surname
+						<input type="text" name="NameSurname><br/>
+					</p>
+<br/>
+				
+				<button type="button"">Submit</button><br/>
+				<button type="button">Submit</button>
+				
+	</form>
+
+	
+<!-- Javascript code for checkboxes -->
+<!-- Limiting checkbox to select one attribute for bread -->	
+<script type="text/javascript">  
+function ValidateBreadQuality()  
+{  
+    var checkboxes = document.getElementsByName("bread_quality");  
+    var numberOfCheckedItems = 0;  
+    for(var i = 0; i < checkboxes.length; i++)  
+    {  
+        if(checkboxes[i].checked)  
+            numberOfCheckedItems++;  
+    }  
+    if(numberOfCheckedItems > 1)  
+    {  
+        alert("You can't select more than one bread quality!");  
+        return false;  
+    }  
+}  
+
+<!-- Limiting checkbox to select one attribute for bread -->
+function ValidateBunsQuality()  
+{  
+    var checkboxes = document.getElementsByName("buns_quality");  
+    var numberOfCheckedItems = 0;  
+    for(var i = 0; i < checkboxes.length; i++)  
+    {  
+        if(checkboxes[i].checked)  
+            numberOfCheckedItems++;  
+    }  
+    if(numberOfCheckedItems > 1)  
+    {  
+        alert("You can't select more than one buns quality!");  
+        return false;  
+    }  
+}  
+</script>
+
+
+</body>
+</html>
